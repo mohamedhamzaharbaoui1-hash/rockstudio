@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rock Studio — Templates web FR / EN / AR</title>
+<meta name="description" content="Rock Studio crée des templates de sites web prêts à l'emploi, en français, anglais et arabe (RTL).">
+<script src="https://cdn.tailwindcss.com/3.4.1"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Cairo:wght@400;700;800&display=swap" rel="stylesheet">
+<style>
+  :root { --brand:#7c3aed; --brand-2:#f59e0b; }
+  body { font-family: Inter, sans-serif; }
+  [dir="rtl"] body { font-family: Cairo, sans-serif; }
+  .brand-bg { background: linear-gradient(135deg,var(--brand),var(--brand-2)); }
+  .brand-text { color: var(--brand); }
+</style>
+</head>
+<body class="bg-white text-slate-800">
+
+<header class="sticky top-0 z-20 bg-white/90 backdrop-blur border-b">
+  <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between gap-3">
+    <a href="#" class="font-extrabold text-xl">Rock<span class="brand-text">Studio</span></a>
+    <nav class="hidden md:flex gap-6 text-sm">
+      <a href="#products" data-i18n="nav_products"></a>
+      <a href="#about" data-i18n="nav_about"></a>
+      <a href="#contact" data-i18n="nav_contact"></a>
+    </nav>
+    <select id="lang" class="border rounded-lg text-sm px-2 py-1" aria-label="Language">
+      <option value="fr">FR</option><option value="en">EN</option><option value="ar">AR</option>
+    </select>
+  </div>
+</header>
+
+<section class="max-w-4xl mx-auto px-4 py-16 md:py-24 text-center">
+  <span class="text-xs font-semibold brand-text bg-violet-50 px-3 py-1 rounded-full" data-i18n="badge"></span>
+  <h1 class="mt-5 text-4xl md:text-6xl font-extrabold leading-tight" data-i18n="title"></h1>
+  <p class="mt-5 text-lg text-slate-600" data-i18n="sub"></p>
+  <a href="#products" class="brand-bg inline-block mt-8 text-white font-semibold px-8 py-3 rounded-xl shadow-lg" data-i18n="cta"></a>
+</section>
+
+<section id="products" class="bg-slate-50 py-16">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl font-extrabold text-center" data-i18n="prod_title"></h2>
+
+    <!-- Produit disponible -->
+    <div class="mt-10 bg-white rounded-3xl shadow-sm p-6 md:p-10 grid md:grid-cols-2 gap-8 items-center">
+      <div class="grid grid-cols-3 gap-3">
+        <a href="demos/produit.html" target="_blank" class="aspect-[3/4] rounded-xl bg-gradient-to-br from-violet-600 to-pink-600 flex items-center justify-center text-4xl">🎧</a>
+        <a href="demos/mode.html" target="_blank" class="aspect-[3/4] rounded-xl bg-orange-100 flex items-center justify-center text-4xl mt-6">👗</a>
+        <a href="demos/formation.html" target="_blank" class="aspect-[3/4] rounded-xl bg-slate-900 flex items-center justify-center text-4xl">🎓</a>
+      </div>
+      <div>
+        <span class="text-xs font-semibold text-green-700 bg-green-50 px-3 py-1 rounded-full" data-i18n="available"></span>
+        <h3 class="mt-3 text-2xl font-extrabold" data-i18n="kit_t"></h3>
+        <p class="mt-3 text-slate-600" data-i18n="kit_d"></p>
+        <ul class="mt-4 space-y-1 text-sm text-slate-700">
+          <li data-i18n="kit_1"></li><li data-i18n="kit_2"></li><li data-i18n="kit_3"></li><li data-i18n="kit_4"></li>
+        </ul>
+        <p class="mt-5 text-3xl font-extrabold brand-text">$12</p>
+        <div class="mt-4 flex flex-wrap gap-2 text-sm">
+          <a href="demos/produit.html" target="_blank" class="border px-4 py-2 rounded-lg font-semibold" data-i18n="demo1"></a>
+          <a href="demos/mode.html" target="_blank" class="border px-4 py-2 rounded-lg font-semibold" data-i18n="demo2"></a>
+          <a href="demos/formation.html" target="_blank" class="border px-4 py-2 rounded-lg font-semibold" data-i18n="demo3"></a>
+        </div>
+        <!-- Remplacer href="#contact" par le lien d'achat Lemon Squeezy une fois la boutique validée -->
+        <a href="#contact" class="brand-bg mt-5 inline-block text-white font-semibold px-6 py-3 rounded-xl" data-i18n="buy"></a>
+      </div>
+    </div>
+
+    <!-- Produits à venir -->
+    <h3 class="mt-14 text-xl font-extrabold" data-i18n="soon_title"></h3>
+    <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div class="bg-white rounded-2xl p-5 shadow-sm opacity-90"><div class="aspect-video rounded-xl bg-sky-100 flex items-center justify-center text-4xl">🍽️</div><span class="mt-3 inline-block text-xs font-semibold text-amber-700 bg-amber-50 px-2 py-0.5 rounded-full" data-i18n="soon"></span><p class="mt-2 font-bold" data-i18n="s1"></p></div>
+      <div class="bg-white rounded-2xl p-5 shadow-sm opacity-90"><div class="aspect-video rounded-xl bg-emerald-100 flex items-center justify-center text-4xl">🏠</div><span class="mt-3 inline-block text-xs font-semibold text-amber-700 bg-amber-50 px-2 py-0.5 rounded-full" data-i18n="soon"></span><p class="mt-2 font-bold" data-i18n="s2"></p></div>
+      <div class="bg-white rounded-2xl p-5 shadow-sm opacity-90"><div class="aspect-video rounded-xl bg-rose-100 flex items-center justify-center text-4xl">💇</div><span class="mt-3 inline-block text-xs font-semibold text-amber-700 bg-amber-50 px-2 py-0.5 rounded-full" data-i18n="soon"></span><p class="mt-2 font-bold" data-i18n="s3"></p></div>
+      <div class="bg-white rounded-2xl p-5 shadow-sm opacity-90"><div class="aspect-video rounded-xl bg-violet-100 flex items-center justify-center text-4xl">💼</div><span class="mt-3 inline-block text-xs font-semibold text-amber-700 bg-amber-50 px-2 py-0.5 rounded-full" data-i18n="soon"></span><p class="mt-2 font-bold" data-i18n="s4"></p></div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="py-16">
+  <div class="max-w-4xl mx-auto px-4 grid sm:grid-cols-3 gap-6 text-center">
+    <div><div class="text-3xl">🌍</div><p class="font-bold mt-2" data-i18n="a1_t"></p><p class="text-sm text-slate-600 mt-1" data-i18n="a1_d"></p></div>
+    <div><div class="text-3xl">⚡</div><p class="font-bold mt-2" data-i18n="a2_t"></p><p class="text-sm text-slate-600 mt-1" data-i18n="a2_d"></p></div>
+    <div><div class="text-3xl">📥</div><p class="font-bold mt-2" data-i18n="a3_t"></p><p class="text-sm text-slate-600 mt-1" data-i18n="a3_d"></p></div>
+  </div>
+</section>
+
+<section id="contact" class="py-16 bg-slate-50 text-center px-4">
+  <h2 class="text-2xl font-extrabold" data-i18n="c_title"></h2>
+  <p class="mt-2 text-slate-600" data-i18n="c_d"></p>
+  <a href="https://github.com/mohamedhamzaharbaoui1-hash" class="mt-5 inline-block border px-6 py-3 rounded-xl font-semibold bg-white">GitHub</a>
+</section>
+
+<footer class="border-t py-8 text-center text-sm text-slate-500" data-i18n="footer"></footer>
+
+<script>
+const T = {
+  fr:{nav_products:"Produits",nav_about:"Pourquoi nous",nav_contact:"Contact",badge:"Templates web multilingues",
+    title:"Des sites prêts à vendre, en français, anglais et arabe.",sub:"Rock Studio crée des templates HTML modernes pour e-commerçants, créateurs et freelances — avec l'arabe en RTL inclus.",
+    cta:"Voir les produits",prod_title:"Nos produits",available:"Disponible",
+    kit_t:"Kit Landing Pages Trilingue",kit_d:"3 landing pages Tailwind complètes, traduites en FR / EN / AR, avec passage automatique en arabe droite-à-gauche.",
+    kit_1:"✓ Page produit, boutique mode et formation en ligne",kit_2:"✓ Sélecteur de langue + détection automatique",kit_3:"✓ Bouton WhatsApp, 100 % mobile",kit_4:"✓ Guide de personnalisation + licence commerciale",
+    demo1:"Démo produit",demo2:"Démo mode",demo3:"Démo formation",buy:"Acheter — 12 $",
+    soon_title:"Bientôt disponibles",soon:"Bientôt",s1:"Restaurant & livraison",s2:"Agence immobilière",s3:"Salon de beauté & réservation",s4:"Portfolio freelance",
+    a1_t:"3 langues",a1_d:"FR, EN et AR avec mise en page RTL native.",a2_t:"Prêt en 5 minutes",a2_d:"Aucune installation : un fichier HTML à ouvrir.",a3_t:"Téléchargement immédiat",a3_d:"Achat unique, accès à vie, mises à jour incluses.",
+    c_title:"Une question ?",c_d:"Contactez-nous via GitHub ou par email après votre achat.",footer:"© 2026 Rock Studio"},
+  en:{nav_products:"Products",nav_about:"Why us",nav_contact:"Contact",badge:"Multilingual web templates",
+    title:"Ready-to-sell websites, in French, English and Arabic.",sub:"Rock Studio builds modern HTML templates for online sellers, creators and freelancers — with Arabic RTL included.",
+    cta:"See products",prod_title:"Our products",available:"Available",
+    kit_t:"Trilingual Landing Page Kit",kit_d:"3 complete Tailwind landing pages, translated in FR / EN / AR, with automatic right-to-left Arabic layout.",
+    kit_1:"✓ Product page, fashion store and online course",kit_2:"✓ Language switcher + auto-detection",kit_3:"✓ WhatsApp button, fully mobile",kit_4:"✓ Customization guide + commercial license",
+    demo1:"Product demo",demo2:"Fashion demo",demo3:"Course demo",buy:"Buy — $12",
+    soon_title:"Coming soon",soon:"Soon",s1:"Restaurant & delivery",s2:"Real estate agency",s3:"Beauty salon & booking",s4:"Freelance portfolio",
+    a1_t:"3 languages",a1_d:"FR, EN and AR with native RTL layout.",a2_t:"Ready in 5 minutes",a2_d:"No install: just open an HTML file.",a3_t:"Instant download",a3_d:"One-time purchase, lifetime access, updates included.",
+    c_title:"Questions?",c_d:"Reach us on GitHub, or by email after your purchase.",footer:"© 2026 Rock Studio"},
+  ar:{nav_products:"المنتجات",nav_about:"لماذا نحن",nav_contact:"تواصل",badge:"قوالب مواقع متعددة اللغات",
+    title:"مواقع جاهزة للبيع، بالفرنسية والإنجليزية والعربية.",sub:"روك ستوديو يصمم قوالب HTML عصرية للتجار وصناع المحتوى والمستقلين — مع دعم كامل للعربية من اليمين إلى اليسار.",
+    cta:"اكتشف المنتجات",prod_title:"منتجاتنا",available:"متوفر",
+    kit_t:"حزمة صفحات هبوط بثلاث لغات",kit_d:"3 صفحات هبوط كاملة مترجمة بالفرنسية والإنجليزية والعربية، مع تحويل تلقائي للعربية من اليمين إلى اليسار.",
+    kit_1:"✓ صفحة منتج، متجر أزياء، ودورة تدريبية",kit_2:"✓ مبدّل لغات مع اكتشاف تلقائي",kit_3:"✓ زر واتساب، متوافق 100٪ مع الجوال",kit_4:"✓ دليل تخصيص + ترخيص تجاري",
+    demo1:"عرض المنتج",demo2:"عرض الأزياء",demo3:"عرض الدورة",buy:"اشترِ — 12 $",
+    soon_title:"قريبًا",soon:"قريبًا",s1:"مطعم وتوصيل",s2:"وكالة عقارية",s3:"صالون تجميل وحجز",s4:"معرض أعمال مستقل",
+    a1_t:"3 لغات",a1_d:"فرنسية وإنجليزية وعربية مع تخطيط RTL أصلي.",a2_t:"جاهز في 5 دقائق",a2_d:"بدون تثبيت: افتح ملف HTML فقط.",a3_t:"تحميل فوري",a3_d:"شراء مرة واحدة، وصول مدى الحياة.",
+    c_title:"لديك سؤال؟",c_d:"تواصل معنا عبر GitHub أو بالبريد بعد الشراء.",footer:"© 2026 روك ستوديو"}
+};
+function setLang(l){
+  if(!T[l]) l="fr";
+  document.documentElement.lang=l; document.documentElement.dir = l==="ar"?"rtl":"ltr";
+  document.querySelectorAll("[data-i18n]").forEach(e=>{e.textContent=T[l][e.dataset.i18n]||"";});
+  document.getElementById("lang").value=l;
+  try{localStorage.setItem("lang",l);}catch(e){}
+}
+document.getElementById("lang").addEventListener("change",e=>setLang(e.target.value));
+let saved; try{saved=localStorage.getItem("lang");}catch(e){}
+setLang(saved || (navigator.language||"fr").slice(0,2));
+</script>
+</body>
+</html>

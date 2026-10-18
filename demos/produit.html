@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nova — Landing Page E-commerce</title>
+<script src="https://cdn.tailwindcss.com/3.4.1"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Cairo:wght@400;700;800&display=swap" rel="stylesheet">
+<style>
+  /* === PERSONNALISATION : changez vos couleurs ici === */
+  :root { --brand:#6d28d9; --brand-2:#db2777; }
+  body { font-family: Inter, sans-serif; }
+  [dir="rtl"] body { font-family: Cairo, sans-serif; }
+  .brand-bg { background: linear-gradient(135deg,var(--brand),var(--brand-2)); }
+  .brand-text { color: var(--brand); }
+</style>
+</head>
+<body class="bg-white text-slate-800">
+
+<header class="sticky top-0 z-20 bg-white/90 backdrop-blur border-b">
+  <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between gap-4">
+    <a href="#" class="font-extrabold text-xl brand-text">Nova</a>
+    <nav class="hidden md:flex gap-6 text-sm">
+      <a href="#features" data-i18n="nav_features"></a>
+      <a href="#reviews" data-i18n="nav_reviews"></a>
+      <a href="#faq" data-i18n="nav_faq"></a>
+    </nav>
+    <div class="flex items-center gap-2">
+      <select id="lang" class="border rounded-lg text-sm px-2 py-1" aria-label="Language">
+        <option value="fr">FR</option><option value="en">EN</option><option value="ar">AR</option>
+      </select>
+      <a href="#buy" class="brand-bg text-white text-sm font-semibold px-4 py-2 rounded-lg" data-i18n="cta_short"></a>
+    </div>
+  </div>
+</header>
+
+<section class="max-w-6xl mx-auto px-4 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
+  <div>
+    <span class="inline-block text-xs font-semibold brand-text bg-violet-50 px-3 py-1 rounded-full" data-i18n="badge"></span>
+    <h1 class="mt-4 text-4xl md:text-5xl font-extrabold leading-tight" data-i18n="hero_title"></h1>
+    <p class="mt-4 text-lg text-slate-600" data-i18n="hero_sub"></p>
+    <div class="mt-8 flex flex-wrap gap-3">
+      <a href="#buy" class="brand-bg text-white font-semibold px-6 py-3 rounded-xl shadow-lg" data-i18n="cta"></a>
+      <a href="#features" class="border font-semibold px-6 py-3 rounded-xl" data-i18n="cta_2"></a>
+    </div>
+    <p class="mt-4 text-sm text-slate-500" data-i18n="trust"></p>
+  </div>
+  <div class="brand-bg rounded-3xl aspect-square flex items-center justify-center text-white text-7xl shadow-2xl">🎧</div>
+</section>
+
+<section id="features" class="bg-slate-50 py-16">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl font-extrabold text-center" data-i18n="feat_title"></h2>
+    <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="bg-white p-6 rounded-2xl shadow-sm"><div class="text-3xl">⚡</div><h3 class="font-bold mt-3" data-i18n="f1_t"></h3><p class="text-slate-600 mt-2" data-i18n="f1_d"></p></div>
+      <div class="bg-white p-6 rounded-2xl shadow-sm"><div class="text-3xl">🔋</div><h3 class="font-bold mt-3" data-i18n="f2_t"></h3><p class="text-slate-600 mt-2" data-i18n="f2_d"></p></div>
+      <div class="bg-white p-6 rounded-2xl shadow-sm"><div class="text-3xl">🛡️</div><h3 class="font-bold mt-3" data-i18n="f3_t"></h3><p class="text-slate-600 mt-2" data-i18n="f3_d"></p></div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews" class="py-16">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl font-extrabold text-center" data-i18n="rev_title"></h2>
+    <div class="mt-10 grid md:grid-cols-3 gap-6">
+      <blockquote class="border p-6 rounded-2xl"><p>★★★★★</p><p class="mt-2" data-i18n="r1"></p><footer class="mt-3 text-sm text-slate-500">— Client A</footer></blockquote>
+      <blockquote class="border p-6 rounded-2xl"><p>★★★★★</p><p class="mt-2" data-i18n="r2"></p><footer class="mt-3 text-sm text-slate-500">— Client B</footer></blockquote>
+      <blockquote class="border p-6 rounded-2xl"><p>★★★★☆</p><p class="mt-2" data-i18n="r3"></p><footer class="mt-3 text-sm text-slate-500">— Client C</footer></blockquote>
+    </div>
+  </div>
+</section>
+
+<section id="buy" class="py-16 bg-slate-50">
+  <div class="max-w-md mx-auto px-4 text-center bg-white rounded-3xl shadow-xl p-8">
+    <p class="text-sm text-slate-500 line-through">129 €</p>
+    <p class="text-5xl font-extrabold brand-text">79 €</p>
+    <p class="mt-2 text-slate-600" data-i18n="offer"></p>
+    <a href="#" class="mt-6 block brand-bg text-white font-semibold py-3 rounded-xl" data-i18n="cta"></a>
+    <p class="mt-3 text-xs text-slate-500" data-i18n="cod"></p>
+  </div>
+</section>
+
+<section id="faq" class="py-16">
+  <div class="max-w-3xl mx-auto px-4">
+    <h2 class="text-3xl font-extrabold text-center" data-i18n="faq_title"></h2>
+    <details class="mt-8 border rounded-xl p-4"><summary class="font-semibold cursor-pointer" data-i18n="q1"></summary><p class="mt-2 text-slate-600" data-i18n="a1"></p></details>
+    <details class="mt-3 border rounded-xl p-4"><summary class="font-semibold cursor-pointer" data-i18n="q2"></summary><p class="mt-2 text-slate-600" data-i18n="a2"></p></details>
+  </div>
+</section>
+
+<footer class="border-t py-8 text-center text-sm text-slate-500" data-i18n="footer"></footer>
+
+<!-- Remplacez 00000000000 par votre numéro WhatsApp -->
+<a href="https://wa.me/00000000000" class="fixed bottom-5 end-5 bg-green-500 text-white rounded-full w-14 h-14 flex items-center justify-center text-2xl shadow-lg" aria-label="WhatsApp">💬</a>
+
+<script>
+/* === TEXTES : modifiez vos contenus dans les 3 langues ici === */
+const T = {
+  fr:{nav_features:"Avantages",nav_reviews:"Avis",nav_faq:"FAQ",cta_short:"Commander",badge:"Nouveau • Livraison gratuite",
+    hero_title:"Le son premium, sans le prix premium.",hero_sub:"Écouteurs sans fil avec réduction de bruit active et 40 h d'autonomie.",
+    cta:"Commander maintenant",cta_2:"Voir les avantages",trust:"✓ Paiement à la livraison  ✓ Retour 14 jours",
+    feat_title:"Pourquoi nos clients l'adorent",f1_t:"Connexion instantanée",f1_d:"Appairage en 1 seconde avec tous vos appareils.",
+    f2_t:"40 h d'autonomie",f2_d:"Une semaine d'écoute avec une seule charge.",f3_t:"Garantie 1 an",f3_d:"Remplacement gratuit en cas de problème.",
+    rev_title:"Ils l'ont adopté",r1:"Qualité incroyable pour ce prix.",r2:"Livré en 48 h, parfait.",r3:"Très confortable au quotidien.",
+    offer:"Offre de lancement — stock limité",cod:"Paiement à la livraison disponible",faq_title:"Questions fréquentes",
+    q1:"Quels sont les délais de livraison ?",a1:"24 à 72 h selon votre ville.",q2:"Puis-je retourner le produit ?",a2:"Oui, sous 14 jours, sans justification.",
+    footer:"© 2026 Nova. Tous droits réservés."},
+  en:{nav_features:"Features",nav_reviews:"Reviews",nav_faq:"FAQ",cta_short:"Order",badge:"New • Free shipping",
+    hero_title:"Premium sound, without the premium price.",hero_sub:"Wireless earbuds with active noise cancelling and 40h battery.",
+    cta:"Order now",cta_2:"See features",trust:"✓ Cash on delivery  ✓ 14-day returns",
+    feat_title:"Why customers love it",f1_t:"Instant pairing",f1_d:"Connects in one second to all your devices.",
+    f2_t:"40h battery",f2_d:"A full week of listening on one charge.",f3_t:"1-year warranty",f3_d:"Free replacement if anything goes wrong.",
+    rev_title:"Loved by customers",r1:"Amazing quality for the price.",r2:"Delivered in 48h, perfect.",r3:"Very comfortable every day.",
+    offer:"Launch offer — limited stock",cod:"Cash on delivery available",faq_title:"FAQ",
+    q1:"How long is delivery?",a1:"24 to 72h depending on your city.",q2:"Can I return it?",a2:"Yes, within 14 days, no questions asked.",
+    footer:"© 2026 Nova. All rights reserved."},
+  ar:{nav_features:"المميزات",nav_reviews:"الآراء",nav_faq:"الأسئلة",cta_short:"اطلب",badge:"جديد • توصيل مجاني",
+    hero_title:"صوت فاخر بسعر في المتناول.",hero_sub:"سماعات لاسلكية مع عزل نشط للضوضاء وبطارية تدوم 40 ساعة.",
+    cta:"اطلب الآن",cta_2:"اكتشف المميزات",trust:"✓ الدفع عند الاستلام  ✓ إرجاع خلال 14 يومًا",
+    feat_title:"لماذا يحبه عملاؤنا",f1_t:"اتصال فوري",f1_d:"يقترن بأجهزتك في ثانية واحدة.",
+    f2_t:"بطارية 40 ساعة",f2_d:"أسبوع كامل من الاستماع بشحنة واحدة.",f3_t:"ضمان سنة",f3_d:"استبدال مجاني عند أي مشكلة.",
+    rev_title:"آراء عملائنا",r1:"جودة مذهلة مقابل السعر.",r2:"وصلني خلال 48 ساعة، ممتاز.",r3:"مريحة جدًا للاستعمال اليومي.",
+    offer:"عرض الإطلاق — كمية محدودة",cod:"الدفع عند الاستلام متاح",faq_title:"الأسئلة الشائعة",
+    q1:"ما هي مدة التوصيل؟",a1:"من 24 إلى 72 ساعة حسب مدينتك.",q2:"هل يمكنني إرجاع المنتج؟",a2:"نعم، خلال 14 يومًا دون أي مبرر.",
+    footer:"© 2026 نوفا. جميع الحقوق محفوظة."}
+};
+function setLang(l){
+  if(!T[l]) l="fr";
+  document.documentElement.lang=l; document.documentElement.dir = l==="ar"?"rtl":"ltr";
+  document.querySelectorAll("[data-i18n]").forEach(e=>{e.textContent=T[l][e.dataset.i18n]||"";});
+  document.getElementById("lang").value=l;
+  try{localStorage.setItem("lang",l);}catch(e){}
+}
+document.getElementById("lang").addEventListener("change",e=>setLang(e.target.value));
+let saved; try{saved=localStorage.getItem("lang");}catch(e){}
+setLang(saved || (navigator.language||"fr").slice(0,2));
+</script>
+</body>
+</html>

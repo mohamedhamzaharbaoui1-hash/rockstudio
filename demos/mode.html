@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lina — Boutique Mode</title>
+<script src="https://cdn.tailwindcss.com/3.4.1"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Inter:wght@400;600&family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  /* === PERSONNALISATION : changez vos couleurs ici === */
+  :root { --brand:#111827; --accent:#c2410c; --cream:#faf7f2; }
+  body { font-family: Inter, sans-serif; background: var(--cream); }
+  .serif { font-family: "Playfair Display", serif; }
+  [dir="rtl"] body, [dir="rtl"] .serif { font-family: Cairo, sans-serif; }
+  .btn { background: var(--brand); color:#fff; }
+  .accent { color: var(--accent); }
+</style>
+</head>
+<body class="text-slate-800">
+
+<div class="text-center text-xs py-2 text-white" style="background:var(--accent)" data-i18n="bar"></div>
+
+<header class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+  <a href="#" class="serif text-2xl font-extrabold">LINA</a>
+  <div class="flex items-center gap-2">
+    <select id="lang" class="border rounded text-sm px-2 py-1 bg-white" aria-label="Language">
+      <option value="fr">FR</option><option value="en">EN</option><option value="ar">AR</option>
+    </select>
+    <a href="#shop" class="btn text-sm px-4 py-2 rounded-full" data-i18n="shop"></a>
+  </div>
+</header>
+
+<section class="max-w-6xl mx-auto px-4 py-12 md:py-20 grid md:grid-cols-2 gap-10 items-center">
+  <div>
+    <p class="uppercase tracking-widest text-xs accent font-semibold" data-i18n="kicker"></p>
+    <h1 class="serif mt-3 text-4xl md:text-6xl font-extrabold leading-tight" data-i18n="title"></h1>
+    <p class="mt-5 text-lg text-slate-600" data-i18n="sub"></p>
+    <a href="#shop" class="btn inline-block mt-8 px-8 py-3 rounded-full font-semibold" data-i18n="cta"></a>
+  </div>
+  <div class="grid grid-cols-2 gap-4">
+    <div class="aspect-[3/4] rounded-2xl bg-orange-200 flex items-end p-4 text-4xl">👗</div>
+    <div class="aspect-[3/4] rounded-2xl bg-stone-300 mt-10 flex items-end p-4 text-4xl">👜</div>
+  </div>
+</section>
+
+<section id="shop" class="bg-white py-16">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="serif text-3xl font-extrabold text-center" data-i18n="col"></h2>
+    <div class="mt-10 grid grid-cols-2 lg:grid-cols-4 gap-5">
+      <div><div class="aspect-[3/4] rounded-xl bg-rose-100 flex items-center justify-center text-5xl">👗</div><p class="mt-3 font-semibold" data-i18n="p1"></p><p class="accent">59 €</p></div>
+      <div><div class="aspect-[3/4] rounded-xl bg-amber-100 flex items-center justify-center text-5xl">🧥</div><p class="mt-3 font-semibold" data-i18n="p2"></p><p class="accent">89 €</p></div>
+      <div><div class="aspect-[3/4] rounded-xl bg-stone-200 flex items-center justify-center text-5xl">👜</div><p class="mt-3 font-semibold" data-i18n="p3"></p><p class="accent">45 €</p></div>
+      <div><div class="aspect-[3/4] rounded-xl bg-orange-100 flex items-center justify-center text-5xl">👠</div><p class="mt-3 font-semibold" data-i18n="p4"></p><p class="accent">69 €</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="py-16">
+  <div class="max-w-6xl mx-auto px-4 grid sm:grid-cols-3 gap-6 text-center">
+    <div><div class="text-3xl">🚚</div><p class="font-semibold mt-2" data-i18n="b1"></p></div>
+    <div><div class="text-3xl">↩️</div><p class="font-semibold mt-2" data-i18n="b2"></p></div>
+    <div><div class="text-3xl">💳</div><p class="font-semibold mt-2" data-i18n="b3"></p></div>
+  </div>
+</section>
+
+<section class="py-16 bg-white">
+  <form class="max-w-xl mx-auto px-4 text-center" onsubmit="event.preventDefault();this.querySelector('button').textContent='✓';">
+    <h2 class="serif text-3xl font-extrabold" data-i18n="nl_t"></h2>
+    <p class="mt-2 text-slate-600" data-i18n="nl_d"></p>
+    <div class="mt-6 flex gap-2">
+      <input type="email" required class="flex-1 min-w-0 border rounded-full px-4 py-3" data-i18n-ph="email">
+      <button class="btn px-6 rounded-full font-semibold" data-i18n="nl_b"></button>
+    </div>
+  </form>
+</section>
+
+<footer class="py-8 text-center text-sm text-slate-500" data-i18n="footer"></footer>
+
+<!-- Remplacez 00000000000 par votre numéro WhatsApp -->
+<a href="https://wa.me/00000000000" class="fixed bottom-5 end-5 bg-green-500 text-white rounded-full w-14 h-14 flex items-center justify-center text-2xl shadow-lg" aria-label="WhatsApp">💬</a>
+
+<script>
+/* === TEXTES : modifiez vos contenus dans les 3 langues ici === */
+const T = {
+  fr:{bar:"Livraison offerte dès 50 € • Paiement à la livraison",shop:"Boutique",kicker:"Nouvelle collection",
+    title:"L'élégance au quotidien.",sub:"Des pièces intemporelles, pensées pour durer, à prix juste.",cta:"Découvrir la collection",
+    col:"Nos best-sellers",p1:"Robe lin",p2:"Trench classique",p3:"Sac cuir",p4:"Escarpins",
+    b1:"Livraison 48 h",b2:"Retours gratuits 14 jours",b3:"Paiement sécurisé ou à la livraison",
+    nl_t:"-10 % sur votre 1re commande",nl_d:"Inscrivez-vous et recevez votre code.",nl_b:"Je m'inscris",email:"Votre email",
+    footer:"© 2026 Lina. Tous droits réservés."},
+  en:{bar:"Free shipping over €50 • Cash on delivery",shop:"Shop",kicker:"New collection",
+    title:"Everyday elegance.",sub:"Timeless pieces, made to last, fairly priced.",cta:"Shop the collection",
+    col:"Our best-sellers",p1:"Linen dress",p2:"Classic trench",p3:"Leather bag",p4:"Heels",
+    b1:"48h delivery",b2:"Free 14-day returns",b3:"Secure payment or cash on delivery",
+    nl_t:"10% off your first order",nl_d:"Sign up and get your code.",nl_b:"Sign up",email:"Your email",
+    footer:"© 2026 Lina. All rights reserved."},
+  ar:{bar:"توصيل مجاني ابتداءً من 50 € • الدفع عند الاستلام",shop:"المتجر",kicker:"تشكيلة جديدة",
+    title:"الأناقة في كل يوم.",sub:"قطع خالدة، مصممة لتدوم، بسعر عادل.",cta:"اكتشفي التشكيلة",
+    col:"الأكثر مبيعًا",p1:"فستان كتان",p2:"معطف كلاسيكي",p3:"حقيبة جلدية",p4:"حذاء بكعب",
+    b1:"توصيل خلال 48 ساعة",b2:"إرجاع مجاني خلال 14 يومًا",b3:"دفع آمن أو عند الاستلام",
+    nl_t:"خصم 10٪ على طلبك الأول",nl_d:"سجّلي واحصلي على رمزك.",nl_b:"اشتراك",email:"بريدك الإلكتروني",
+    footer:"© 2026 لينا. جميع الحقوق محفوظة."}
+};
+function setLang(l){
+  if(!T[l]) l="fr";
+  document.documentElement.lang=l; document.documentElement.dir = l==="ar"?"rtl":"ltr";
+  document.querySelectorAll("[data-i18n]").forEach(e=>{e.textContent=T[l][e.dataset.i18n]||"";});
+  document.querySelectorAll("[data-i18n-ph]").forEach(e=>{e.placeholder=T[l][e.dataset.i18nPh]||"";});
+  document.getElementById("lang").value=l;
+  try{localStorage.setItem("lang",l);}catch(e){}
+}
+document.getElementById("lang").addEventListener("change",e=>setLang(e.target.value));
+let saved; try{saved=localStorage.getItem("lang");}catch(e){}
+setLang(saved || (navigator.language||"fr").slice(0,2));
+</script>
+</body>
+</html>

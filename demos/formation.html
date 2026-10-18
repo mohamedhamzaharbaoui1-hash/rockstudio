@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Skillup — Formation en ligne</title>
+<script src="https://cdn.tailwindcss.com/3.4.1"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Cairo:wght@400;700;800&display=swap" rel="stylesheet">
+<style>
+  /* === PERSONNALISATION : changez vos couleurs ici === */
+  :root { --brand:#0ea5e9; --brand-2:#10b981; }
+  body { font-family: Inter, sans-serif; }
+  [dir="rtl"] body { font-family: Cairo, sans-serif; }
+  .brand-bg { background: linear-gradient(135deg,var(--brand),var(--brand-2)); }
+  .brand-text { color: var(--brand); }
+</style>
+</head>
+<body class="bg-slate-950 text-slate-100">
+
+<header class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+  <a href="#" class="font-extrabold text-xl">Skill<span class="brand-text">up</span></a>
+  <div class="flex items-center gap-2">
+    <select id="lang" class="bg-slate-900 border border-slate-700 rounded-lg text-sm px-2 py-1" aria-label="Language">
+      <option value="fr">FR</option><option value="en">EN</option><option value="ar">AR</option>
+    </select>
+    <a href="#price" class="brand-bg text-white text-sm font-semibold px-4 py-2 rounded-lg" data-i18n="join"></a>
+  </div>
+</header>
+
+<section class="max-w-4xl mx-auto px-4 py-16 md:py-24 text-center">
+  <span class="text-xs font-semibold px-3 py-1 rounded-full border border-slate-700" data-i18n="badge"></span>
+  <h1 class="mt-5 text-4xl md:text-6xl font-extrabold leading-tight" data-i18n="title"></h1>
+  <p class="mt-5 text-lg text-slate-400" data-i18n="sub"></p>
+  <a href="#price" class="brand-bg inline-block mt-8 text-white font-semibold px-8 py-4 rounded-xl" data-i18n="cta"></a>
+  <div class="mt-10 grid grid-cols-3 gap-4 max-w-lg mx-auto">
+    <div><p class="text-3xl font-extrabold brand-text">2 400+</p><p class="text-sm text-slate-400" data-i18n="s1"></p></div>
+    <div><p class="text-3xl font-extrabold brand-text">4,9★</p><p class="text-sm text-slate-400" data-i18n="s2"></p></div>
+    <div><p class="text-3xl font-extrabold brand-text">32</p><p class="text-sm text-slate-400" data-i18n="s3"></p></div>
+  </div>
+</section>
+
+<section class="py-16 bg-slate-900">
+  <div class="max-w-3xl mx-auto px-4">
+    <h2 class="text-3xl font-extrabold text-center" data-i18n="prog"></h2>
+    <ol class="mt-10 space-y-4">
+      <li class="bg-slate-950 border border-slate-800 rounded-xl p-5"><span class="brand-text font-bold">01</span> <span data-i18n="m1"></span></li>
+      <li class="bg-slate-950 border border-slate-800 rounded-xl p-5"><span class="brand-text font-bold">02</span> <span data-i18n="m2"></span></li>
+      <li class="bg-slate-950 border border-slate-800 rounded-xl p-5"><span class="brand-text font-bold">03</span> <span data-i18n="m3"></span></li>
+      <li class="bg-slate-950 border border-slate-800 rounded-xl p-5"><span class="brand-text font-bold">04</span> <span data-i18n="m4"></span></li>
+    </ol>
+  </div>
+</section>
+
+<section id="price" class="py-16">
+  <div class="max-w-4xl mx-auto px-4 grid md:grid-cols-2 gap-6">
+    <div class="border border-slate-800 rounded-2xl p-8">
+      <p class="font-semibold" data-i18n="plan1"></p><p class="text-4xl font-extrabold mt-2">49 €</p>
+      <p class="mt-4 text-slate-400" data-i18n="plan1_d"></p>
+      <a href="#" class="mt-6 block text-center border border-slate-600 py-3 rounded-xl font-semibold" data-i18n="choose"></a>
+    </div>
+    <div class="brand-bg rounded-2xl p-[2px]"><div class="bg-slate-950 rounded-2xl p-8 h-full">
+      <p class="font-semibold brand-text" data-i18n="plan2"></p><p class="text-4xl font-extrabold mt-2">99 €</p>
+      <p class="mt-4 text-slate-400" data-i18n="plan2_d"></p>
+      <a href="#" class="mt-6 block text-center brand-bg text-white py-3 rounded-xl font-semibold" data-i18n="choose"></a>
+    </div></div>
+  </div>
+  <p class="mt-6 text-center text-sm text-slate-400" data-i18n="guar"></p>
+</section>
+
+<footer class="border-t border-slate-800 py-8 text-center text-sm text-slate-500" data-i18n="footer"></footer>
+
+<script>
+/* === TEXTES : modifiez vos contenus dans les 3 langues ici === */
+const T = {
+  fr:{join:"Rejoindre",badge:"🎓 Formation 100 % en ligne",title:"Maîtrisez le marketing digital en 30 jours.",
+    sub:"Une méthode pas-à-pas, des cas concrets et une communauté pour vous accompagner.",cta:"Commencer maintenant",
+    s1:"élèves",s2:"note moyenne",s3:"leçons vidéo",prog:"Le programme",
+    m1:"Les bases : audience, offre et positionnement",m2:"Réseaux sociaux : créer du contenu qui vend",
+    m3:"Publicité Facebook & TikTok rentable",m4:"Automatiser et passer à l'échelle",
+    plan1:"Essentiel",plan1_d:"Accès à vie aux 32 leçons + ressources.",plan2:"Premium",plan2_d:"Tout l'Essentiel + coaching de groupe + certificat.",
+    choose:"Choisir",guar:"✓ Satisfait ou remboursé 30 jours",footer:"© 2026 Skillup. Tous droits réservés."},
+  en:{join:"Join",badge:"🎓 100% online course",title:"Master digital marketing in 30 days.",
+    sub:"A step-by-step method, real case studies and a community to support you.",cta:"Start now",
+    s1:"students",s2:"average rating",s3:"video lessons",prog:"The curriculum",
+    m1:"Foundations: audience, offer and positioning",m2:"Social media: content that sells",
+    m3:"Profitable Facebook & TikTok ads",m4:"Automate and scale",
+    plan1:"Essential",plan1_d:"Lifetime access to 32 lessons + resources.",plan2:"Premium",plan2_d:"Everything in Essential + group coaching + certificate.",
+    choose:"Choose",guar:"✓ 30-day money-back guarantee",footer:"© 2026 Skillup. All rights reserved."},
+  ar:{join:"انضم",badge:"🎓 تدريب عبر الإنترنت 100٪",title:"أتقن التسويق الرقمي في 30 يومًا.",
+    sub:"منهج خطوة بخطوة، حالات واقعية ومجتمع يرافقك.",cta:"ابدأ الآن",
+    s1:"طالب",s2:"متوسط التقييم",s3:"درس فيديو",prog:"البرنامج",
+    m1:"الأساسيات: الجمهور، العرض والتموضع",m2:"وسائل التواصل: محتوى يبيع",
+    m3:"إعلانات فيسبوك وتيك توك المربحة",m4:"الأتمتة والتوسع",
+    plan1:"الأساسي",plan1_d:"وصول مدى الحياة إلى 32 درسًا + الموارد.",plan2:"المميز",plan2_d:"كل ما في الأساسي + تدريب جماعي + شهادة.",
+    choose:"اختر",guar:"✓ ضمان استرداد المال خلال 30 يومًا",footer:"© 2026 سكيل أب. جميع الحقوق محفوظة."}
+};
+function setLang(l){
+  if(!T[l]) l="fr";
+  document.documentElement.lang=l; document.documentElement.dir = l==="ar"?"rtl":"ltr";
+  document.querySelectorAll("[data-i18n]").forEach(e=>{e.textContent=T[l][e.dataset.i18n]||"";});
+  document.getElementById("lang").value=l;
+  try{localStorage.setItem("lang",l);}catch(e){}
+}
+document.getElementById("lang").addEventListener("change",e=>setLang(e.target.value));
+let saved; try{saved=localStorage.getItem("lang");}catch(e){}
+setLang(saved || (navigator.language||"fr").slice(0,2));
+</script>
+</body>
+</html>
